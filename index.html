@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Try Challenge - Test Page</title>
+
+  <!-- ===== PASTE YOUR SWITCHFROG SNIPPET HERE (replace this comment) ===== -->
+
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f5f7fa; color: #1a1a1a; margin: 0; padding: 24px; }
+    main { max-width: 440px; margin: 40px auto; background: #fff; padding: 28px; border-radius: 10px; border: 1px solid #d9dee5; }
+    h1 { font-size: 1.4rem; margin-top: 0; }
+    h2 { font-size: 1.1rem; margin-top: 28px; }
+    label { display: block; margin: 14px 0 4px; font-size: 0.9rem; }
+    input, textarea { width: 100%; padding: 9px; border: 1px solid #b8c0cc; border-radius: 6px; box-sizing: border-box; font: inherit; }
+    button { margin-top: 16px; padding: 10px 16px; border: 0; border-radius: 6px; background: #1f6feb; color: #fff; font: inherit; cursor: pointer; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
+    #result { margin-top: 16px; font-size: 0.9rem; color: #1a7f37; min-height: 1.2em; }
+    nav a { margin-right: 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AI Try Challenge - Test Page</h1>
+    <p>This is a demo page used to test AI agent detection. Please do not enter real passwords or personal data.</p>
+
+    <nav>
+      <a href="#login">Sign in</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <h2 id="login">Sign in (demo)</h2>
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="test@example.com" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="demo only" required>
+      <button type="submit">Sign in</button>
+    </form>
+
+    <h2 id="contact">Contact form (demo)</h2>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input id="name" type="text" required>
+      <label for="message">Message</label>
+      <textarea id="message" rows="3" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+
+    <p id="result" role="status"></p>
+  </main>
+
+  <script>
+    // Demo only: nothing is sent anywhere. Forms just show a confirmation message.
+    const result = document.getElementById('result');
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      result.textContent = 'Demo sign-in submitted (no data was sent).';
+    });
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      result.textContent = 'Demo message submitted (no data was sent).';
+    });
+  </script>
+</body>
+</html>
